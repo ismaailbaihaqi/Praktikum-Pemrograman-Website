@@ -1,0 +1,127 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 1%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tfoot {
+  margin: auto;
+  background-color: beige;
+}
+
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  padding: 20px;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* ... (bagian CSS lain yang sudah ada) */
+
+.button {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #4caf60;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        table, th, td {
+          border:1px solid black;
+          margin: auto;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+    <nav>
+        <a href="home.html">Homepage</a>
+        <a href="krs.html">KRS</a>
+        <a href="about.html">About Me</a>
+    </nav>
+</head>
+<body>
+    <table style="width:55%">
+        <h5>
+
+        </h5>
+        <thead>
+          <tr>
+            <th>Kode MK</th>
+            <th>Mata Kuliah</th>
+            <th>Hari</th>
+            <th>Jam</th>
+            <th>Dosen</th>
+            <th>SKS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ISM6312</td>
+            <td>Manajemen Pengetahuan</td>
+            <td>Senin</td>
+            <td>13.10 - 15.40</td>
+            <td>Dr.Dedy Sugiarto</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>IKA6301</td>
+            <td>Kecerdasan Buatan</td>
+            <td>Selasa</td>
+            <td>07.30 - 10.00</td>
+            <td>Anung Barlianto Ariwibowo, M.Kom</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>IKG6305</td>
+            <td>Pemrograman Web</td>
+            <td>Rabu</td>
+            <td>08.00 - 10.00</td>
+            <td>Dian Pratiwi, S.T., M.T.I</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>IKb6210</td>
+            <td>Bahasa Inggris Lanjut</td>
+            <td>Rabu</td>
+            <td>10.10 - 12.30</td>
+            <td>Dra. Mutmainatul Mardiah, M.Pd.</td>
+            <td>2.00</td>
+          </tr>
+          <tr>
+            <td>ISB6302</td>
+            <td>Inovasi Digital</td>
+            <td>Rabu</td>
+            <td>13.10 - 15.40</td>
+            <td>Drs. Muhammad Najih, M.Sc.</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>IKS6320</td>
+            <td>User Interface/User Experience</td>
+            <td>Kamis</td>
+            <td>07.30-10.00</td>
+            <td>Ir. Agung Sediyono, M.T, Ph.D.</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>ISP6202</td>
+            <td>Rantai Pasok Digital</td>
+            <td>Kamis</td>
+            <td>13.10-15.40</td>
+            <td>Dr. Dedy Sugiarto</td>
+            <td>2.00</td>
+          </tr>
+          <tr>
+            <td>ISS6305</td>
+            <td>Analitik Bisnis</td>
+            <td>Jum'at</td>
+            <td>13.30-16.00</td>
+            <td>Rully Mardjono, S.E, M.M.</td>
+            <td>3.00</td>
+          </tr>
+          <tr>
+            <td>UKD6200</td>
+            <td>Kewarganegaraan, Kebangsaan, Demokrasi dan Hak Asasi Manusia</td>
+            <td>Sabtu</td>
+            <td>13.00-14.40</td>
+            <td>Rini Purwaningsih, S.H, M.H.</td>
+            <td>2.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <td colspan="5">Total SKS Semester</td>
+              <td id="totalSKS"></td>
+            </tr>
+        </tfoot>
+      </table>
+      <script>
+        const sksElements = document.querySelectorAll('tbody tr td:nth-child(6)');
+        const totalSKSElement = document.getElementById('totalSKS');
+        let totalSKS = 0;
+  
+        sksElements.forEach(sks => {
+          const sksValue = parseFloat(sks.textContent);
+          totalSKS += sksValue;
+          sks.parentElement.classList.toggle('highlight', sksValue > 3);
+        });
+  
+        totalSKSElement.textContent = totalSKS.toFixed(2);
+  
+        if (totalSKS > 24) {
+          alert('Total SKS melebihi batas maksimal (24 SKS)');
+          alert('Silahkan drop MK sampai jumlah sks maksimal 24')
+          alert('Kalo melebihi 24 ga di acc ama Dosen')
+        }
+      </script>
+</body>
+</html>
