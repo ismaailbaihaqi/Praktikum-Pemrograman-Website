@@ -1,0 +1,71 @@
+header {
+    height: 70px;
+    background-color: #333;
+    padding: 0 20px;
+}
+
+header h1 {
+    float: left;
+    margin-top: 32px;
+}
+
+header nav {
+    float: left;
+}
+
+header nav ul li {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    color: #F1F1F1;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+body {
+    background-color: #F1F1F1;
+    color: black;
+    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+}
+
+img.profile-picture {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 0 auto 20px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    text-align: center;
+    color: #F1F1F1;
+}
+
+#footer-pictos a img {
+    margin: 0 10px;
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+#footer-pictos a img:hover {
+    transform: scale(1.5);
+}
