@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 20px 23px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  border-color: black;
+}
+
+.hero {
+  background-color: #f2f2f2;
+  padding: 100px 0;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.skills .progress {
+  height: 30px;
+  border-color: black;
+  box-shadow: 0px 20px 23px rgba(0, 0, 0, 0.1);
+  transition: width 2s;
+}
+
+.skills .progress:hover {
+  transform: scale(1.1);
+}
+
+#searchForm {
+  width: 300px;
+  margin-left: auto;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center; 
+}
+
+.logo {
+  width: 100px;  
+  margin-right: 20px;  
+}
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  text-align: center;
+  color: #F1F1F1;
+}
+
+#footer-pictos a img {
+  margin: 0 10px;
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#footer-pictos a img:hover {
+  transform: scale(1.5);
+}
