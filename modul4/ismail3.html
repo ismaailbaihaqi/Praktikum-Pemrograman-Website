@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB VALIDASI FORM</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" action="ismail4.html" method="post">
+        <h1>Praktikum 4</h1>
+        <h2>#3. Warning Validasi inputan hanya sebuah Huruf dan Angka</h2>
+        <h3>--------------</h3>
+        <label for="username">Ismail Baihaqi - 065002200025</label><br>
+        <label for="">Username: </label>
+        <input type="text" id="username" name="username" placeholder="Masukkan Username">
+        <br><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("myForm").onsubmit = function() { return validasi_input(this); };
+
+        function validasi_input(form) {
+            var mincar = 5;
+            var pola_username = /^[a-zA-Z0-9]{6,100}$/;
+
+            if (form.username.value === "") {
+                alert("Username masih kosong");
+                form.username.focus();
+                return false;
+            } else if (form.username.value.length < mincar) {
+                alert("Panjang username minimal 5 karakter!");
+                form.username.focus();
+                return false;
+            } else if (!pola_username.test(form.username.value)) {
+                alert("Username minimal 6 karakter dan hanya boleh huruf atau angka");
+                form.username.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
