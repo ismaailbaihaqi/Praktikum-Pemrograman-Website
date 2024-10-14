@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPK Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Ismail Baihaqi - 065002200025</h3>
+    <h1>IPK Calculator</h1>
+    <p>Hitung IPK Anda dengan mudah dan cepat</p><br>
+<form id="ipkForm">
+    <div class="form-group">
+        <label for="subject">Mata Kuliah</label>
+        <input type="text" id="subject" placeholder="Masukkan Mata Kuliah">
+    </div>
+
+    <div class="form-group">
+        <label for="credits">SKS</label>
+        <input type="number" id="credits" placeholder="Masukkan SKS">
+    </div>
+
+    <div class="form-group">
+        <label for="grade">Nilai Akhir</label>
+        <input type="number" id="grade" placeholder="Masukkan Nilai Akhir (1-100)">
+    </div>
+
+    <button type="button" id="addButton" onclick="addCourse()">Tambah</button>
+    <button type="button" id="updateButton" style="display: none;" onclick="updateCourse()">Update</button>
+    <br><br>
+</form>
+
+<div class="output">
+    <h2>Mata Kuliah yang Ditambahkan:</h2>
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th>Mata Kuliah</th>
+                <th>SKS</th>
+                <th>Nilai Akhir</th>
+                <th>Nilai IPK</th>
+                <th>Bobot</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="courseList">
+        </tbody>
+    </table>
+
+    <div class="gpa-section">
+        <h3>Total IPK: <span id="gpa">0.00</span></h3>
+        <p id="gpaMessage"></p>
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
