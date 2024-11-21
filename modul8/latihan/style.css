@@ -1,0 +1,47 @@
+/* Table Styles */
+table {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-collapse: collapse; /* Menghilangkan celah default antar sel */
+    width: 100%; /* Pastikan tabel mengambil lebar penuh kontainer */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6; /* Garis batas untuk setiap sel */
+}
+
+/* Warna untuk Header Tabel */
+th {
+    background-color: #007bff; /* Warna biru gelap untuk header */
+    color: #000000; /* Mengubah teks header menjadi warna hitam */
+    font-weight: bold;
+    text-transform: uppercase; /* Opsional: Semua teks header menjadi huruf kapital */
+}
+
+/* Warna untuk Baris Isi Data */
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Warna abu terang untuk baris genap */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Warna putih untuk baris ganjil */
+}
+
+/* Fix for table top row visibility */
+thead th {
+    position: sticky; /* Agar header tetap terlihat saat scroll panjang */
+    top: 0;
+    z-index: 1;
+}
+
+/* Table Responsive */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+        overflow-x: auto; /* Tambahkan scroll horizontal untuk tabel besar */
+    }
+}
